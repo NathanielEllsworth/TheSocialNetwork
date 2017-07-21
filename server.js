@@ -56,7 +56,7 @@ app.get("/scrape", function (req, res) {
 
         });
     });
-    res.send("Scrape finished");
+    res.send("doc");
 });
 
 app.get("/stocks", function (req, res) {

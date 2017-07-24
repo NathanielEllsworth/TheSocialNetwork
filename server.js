@@ -17,7 +17,10 @@ app.use(bodyParser.urlencoded({
 
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost/stockScraper");
+const dbConnectString = process.env.MONGODB_URI || "mongodb://localhost/stockScraper";
+
+mongoose.connect(dbConnectString);
+
 var db = mongoose.connection;
 db.on("error", function (error) {
     console.log("Mongoose Error: ", error);

@@ -59,7 +59,7 @@ app.get("/scrape", function (req, res) {
 
         });
     });
-    res.send("doc");
+    res.send(doc);
 });
 
 app.get("/stocks", function (req, res) {

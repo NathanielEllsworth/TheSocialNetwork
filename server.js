@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({
 
 app.use(express.static("public"));
 
-const dbConnectString = process.env.MONGODB_URI || "mongodb://localhost/stockScraper";
+const dbConnectString = process.env.MONGODB_URI || "mongodb://heroku_9kjdpkb3:7aalitr43quhhgli2hah3q51kh@ds151909.mlab.com:51909/heroku_9kjdpkb3";
 
 mongoose.connect(dbConnectString);
 
